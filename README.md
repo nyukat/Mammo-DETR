@@ -61,15 +61,16 @@ sh ./make.sh
 python test.py
 ```
 
-
-
-## Usage
+## Run the inference
 
 ```bash
 
 ./run.sh
 
 ```
+## License
+
+This repository is licensed under the terms of the GNU AGPLv3 license.
 
 ## Citation
 If you use this code in your research, please cite our paper:
