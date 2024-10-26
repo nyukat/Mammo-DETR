@@ -18,19 +18,19 @@ export PYTHONPATH=$(pwd):$PYTHONPATH
 
 
 # echo 'Stage 1: Crop Mammograms'
-# python3 src/cropping/crop_mammogram.py \
-#     --input-data-folder $DATA_FOLDER \
-#     --output-data-folder $CROPPED_IMAGE_PATH \
-#     --exam-list-path $INITIAL_EXAM_LIST_PATH  \
-#     --cropped-exam-list-path $CROPPED_EXAM_LIST_PATH  \
-#     --num-processes $NUM_PROCESSES
+python3 src/cropping/crop_mammogram.py \
+    --input-data-folder $DATA_FOLDER \
+    --output-data-folder $CROPPED_IMAGE_PATH \
+    --exam-list-path $INITIAL_EXAM_LIST_PATH  \
+    --cropped-exam-list-path $CROPPED_EXAM_LIST_PATH  \
+    --num-processes $NUM_PROCESSES
 
 # echo 'Stage 2: Extract Centers'
-# python3 src/optimal_centers/get_optimal_centers.py \
-#     --cropped-exam-list-path $CROPPED_EXAM_LIST_PATH \
-#     --data-prefix $CROPPED_IMAGE_PATH \
-#     --output-exam-list-path $EXAM_LIST_PATH \
-#     --num-processes $NUM_PROCESSES
+python3 src/optimal_centers/get_optimal_centers.py \
+    --cropped-exam-list-path $CROPPED_EXAM_LIST_PATH \
+    --data-prefix $CROPPED_IMAGE_PATH \
+    --output-exam-list-path $EXAM_LIST_PATH \
+    --num-processes $NUM_PROCESSES
 
 # echo 'Stage 3: Run Classifier'
 bsub -Is -q gpu32 -gpu "num=1:mode=shared:j_exclusive=yes" -R "rusage[mem=3]" -R "select[hname!=skygpu19]" \

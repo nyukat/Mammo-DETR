@@ -1,0 +1,4 @@
+# ninja log v5
+1	6684	1680548279544695080	/gpfs/data/geraslab/Yanqi/Deformable-DETR/models/ops/build/temp.linux-x86_64-cpython-38/gpfs/data/geraslab/Yanqi/Deformable-DETR/models/ops/src/cpu/ms_deform_attn_cpu.o	b27ceca56a7c3501
+0	22878	1680548295683395349	/gpfs/data/geraslab/Yanqi/Deformable-DETR/models/ops/build/temp.linux-x86_64-cpython-38/gpfs/data/geraslab/Yanqi/Deformable-DETR/models/ops/src/cuda/ms_deform_attn_cuda.o	3c1eb8ff67b4c0eb
+1	24283	1680548297134595608	/gpfs/data/geraslab/Yanqi/Deformable-DETR/models/ops/build/temp.linux-x86_64-cpython-38/gpfs/data/geraslab/Yanqi/Deformable-DETR/models/ops/src/vision.o	cbd973dddf48eaf4

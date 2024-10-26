@@ -1,21 +1,20 @@
-# Copyright (C) 2020 Yiqiu Shen, Nan Wu, Jason Phang, Jungkyu Park, Kangning Liu,
-# Sudarshini Tyagi, Laura Heacock, S. Gene Kim, Linda Moy, Kyunghyun Cho, Krzysztof J. Geras
+# Copyright (C) 2020 Yanqi Xu, Yiqiu Shen, Laura Heacock, Carlos Fernandez-Granda, Krzysztof J. Geras
+
+# This file is part of Mammo-DETR.
 #
-# This file is part of GMIC.
-#
-# GMIC is free software: you can redistribute it and/or modify
+# Mammo-DETR is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Affero General Public License as
 # published by the Free Software Foundation, either version 3 of the
 # License, or (at your option) any later version.
 #
-# GMIC is distributed in the hope that it will be useful,
+# Mammo-DETR is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU Affero General Public License for more details.
 #
 # You should have received a copy of the GNU Affero General Public License
-# along with GMIC.  If not, see <http://www.gnu.org/licenses/>.
-# ==============================================================================
+# along with Mammo-DETR.  If not, see <http://www.gnu.org/licenses/>.
+# ------------------------------------------------------------------------
 
 """
 Script that executes the model pipeline.
@@ -36,7 +35,6 @@ from src.detection_loading import loading, transformations
 from src.modeling.def_detr.deformable_detr import build_deformable_detr
 from PIL import Image
 import pickle
-#assert torch.__version__ == '1.1.0', "GMIC not tested for pytorch > 1.1.0 (nor python3.8)"
 
 def cxcywh_to_x0y0wh(bbox):
     cx, cy, w, h = bbox
@@ -184,7 +182,7 @@ def start_experiment(model_path, data_path, output_path, model_index, parameters
 
 def main():
     # retrieve command line arguments
-    parser = argparse.ArgumentParser(description='Run GMIC on the sample data')
+    parser = argparse.ArgumentParser(description='Run Mammo-DETR on the sample data')
     parser.add_argument('--model-path', required=True)
     parser.add_argument('--data-path', required=True)
     parser.add_argument('--image-path', required=True)
@@ -196,20 +194,6 @@ def main():
     args = parser.parse_args()
 
     parameters = {
-        "device_type": args.device_type,
-        "gpu_number": args.gpu_number,
-        "max_crop_noise": (100, 100),
-        "max_crop_size_noise": 100,
-        "image_path": args.image_path,
-        "segmentation_path": args.segmentation_path,
-        "output_path": args.output_path,
-        # model related hyper-parameters
-        "cam_size": (46, 30),
-        "K": 6,
-        "crop_shape": (256, 256),
-        "post_processing_dim":256,
-        "num_classes":2,
-        "use_v1_global":False,
     }
     start_experiment(
         model_path=args.model_path,

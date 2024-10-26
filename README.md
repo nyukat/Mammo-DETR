@@ -20,7 +20,6 @@ Our research reveals that:
 - `sample_output/`: Includes example outputs from the model
 - `src/`: Source code for the Mammo-DETR model
 - `requirements.txt`: List of Python dependencies
-- `run.sbatch`: Batch script for running the model on a cluster
 - `run.sh`: Shell script for local execution
 - `models`: We released the [model Checkpoints](https://drive.google.com/drive/folders/1h-VD5mr1xfa4pvzQCpox8y7u-R84Hkpu?usp=drive_link)
 
@@ -67,12 +66,9 @@ python test.py
 ## Usage
 
 ```bash
-## To run the model locally:
+
 ./run.sh
 
-## For cluster execution, use:
-
-sbatch run.sbatch
 ```
 
 ## Citation
