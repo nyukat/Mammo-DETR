@@ -1,0 +1,20 @@
+# backbone setting
+build_deformable_detr.backbone="swin-t"
+
+# detr setting
+build_deformable_detr.matcher_class="hungarian"
+build_deformable_detr.focal_alpha=0.2
+build_deformable_detr.pos_focal_gamma=2.14
+build_deformable_detr.neg_focal_gamma=2.14
+build_deformable_detr.num_queries=170
+build_deformable_detr.ce_loss_coef=0.85
+build_deformable_detr.giou_loss_coef=0.47
+collect_topk_boxes_and_logits.topk=50
+Backbone.out_indices=[3]
+SwinBackbone.out_indices=[3]
+build_deformable_detr.enc_layers=3
+build_deformable_detr.num_feature_levels=1
+build_deformable_detr.with_box_refine=False
+build_deformable_detr.two_stage=False
+build_deformable_detr.mixed_query_selection=False
+build_deformable_detr.use_nms=False
