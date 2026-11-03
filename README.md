@@ -21,7 +21,7 @@ Our research reveals that:
 - `src/`: Source code for the Mammo-DETR model
 - `requirements.txt`: List of Python dependencies
 - `run.sh`: Shell script for local execution
-- `models`: We released the [model Checkpoints](https://drive.google.com/drive/folders/1h-VD5mr1xfa4pvzQCpox8y7u-R84Hkpu?usp=drive_link)
+% - `models`: We released the [model Checkpoints](https://drive.google.com/drive/folders/1h-VD5mr1xfa4pvzQCpox8y7u-R84Hkpu?usp=drive_link)
 
 
 ## Installation
